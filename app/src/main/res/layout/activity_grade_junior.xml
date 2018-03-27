@@ -5,5 +5,79 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.stl.carquiz.GradeJuniorActivity">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="1/10"
+            android:gravity="right"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="fill_parent"
+            android:layout_height="150dip"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="60dp"
+            android:background="#FAFAFA"
+            android:padding="10dp"
+            android:text="問題文"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/one"
+            android:layout_width="350sp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/question"
+            android:layout_marginBottom="30dp"
+            android:background="#D0FA58"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/two"
+            android:layout_width="350sp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/one"
+            android:layout_marginBottom="30dp"
+            android:background="#D0FA58"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/three"
+            android:layout_width="350sp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/two"
+            android:layout_marginBottom="30dp"
+            android:background="#D0FA58"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/four"
+            android:layout_width="350sp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/three"
+            android:background="#D0FA58"
+            android:textSize="18sp" />
+    </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

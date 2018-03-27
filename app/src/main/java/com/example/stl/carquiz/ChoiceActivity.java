@@ -19,7 +19,7 @@ public class ChoiceActivity extends AppCompatActivity {
     }
 
     public void onClickGrade3(View v){
-        Intent intent = new Intent(this,GradeThirdAcitivty.class);
+        Intent intent = new Intent(this,GradeThirdActivity.class);
         startActivity(intent);
     }
 

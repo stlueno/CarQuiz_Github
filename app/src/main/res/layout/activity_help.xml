@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.stl.carquiz.HelpActivity">
+
+    <ScrollView
+        android:id="@+id/ScrollView"
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="く る 研 と は ？"
+                android:gravity="center"
+                android:textSize="40sp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"/>
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="〇くるまマイスター検定とは"
+                android:gravity=""
+                android:textSize="20sp"/>
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="日本の最も重要な基幹産業の代表でもある「くるま産業」。この「くるま産業」をさらに育て、もっと幅広い人たちに「くるま」への興味を抱いて頂きたい。そして「くるま」のある生活を楽しんで頂きたい。
+「くるまマイスター検定」は、そんな「くるま」のある生活、「くるま」文化の醸成に貢献することを目的としています。"
+                android:gravity=""
+                android:textSize="15sp"/>
+            <View
+                android:id="@+id/hairline"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:background="#D0FA58"/>
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="〇受験するメリットとは"
+                android:layout_marginTop="18sp"
+                android:gravity=""
+                android:textSize="20sp"/>
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="くるまマイスター検定を受検すると、普段何気なく触れ合っている「くるま」が持つ様々な魅力を発見できます。
+        そして、くるまに関する幅広く豊かな知識が身につきます。くるまが発展してきた歴史は、人類発展の歴史でもあります。
+        なぜそのくるまが生まれたか、なぜその機能が生まれたかなど、そこには必ず背景や理由が存在します。"
+                android:gravity=""
+                android:textSize="18sp"/>
+            <View
+                android:id="@+id/hairline2"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:background="#D0FA58"/>
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="〇好きなことをキャリアにできる"
+                android:layout_marginTop="18sp"
+                android:gravity=""
+                android:textSize="20sp"/>
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="現在、自動車に関する総合的な知識を得られる検定試験はくるまマイスター検定だけとなります。
+ご自身がどれだけくるまに対しての知識をお持ちか、この検定試験で発揮してください。
+またその結果を周りの方に披露していただくため、下記のような特典もご用意しております。仲間、進学、職場、就職や転職など、あなたのくるまへの知識を是非ともキャリアにしてください。
+唯一の自動車知識検定という観点から業界でも注目され、合格者の増加に伴い幅広く活用されています。"
+                android:gravity=""
+                android:textSize="18sp"/>
+            <Button
+                android:id="@+id/Next"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="戻る"
+                android:layout_marginTop="30sp"
+                android:layout_marginBottom="40sp"
+                android:onClick="onClick"
+                android:textSize="20sp"
+                android:background="#D0FA58"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

@@ -2,6 +2,7 @@ package com.example.stl.carquiz;
 
 import android.content.Intent;
 import android.content.res.AssetManager;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,19 +11,13 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
 import java.util.Random;
 
-import au.com.bytecode.opencsv.CSVReader;
+import opencsv.CSVReader;
+import DataAccess.DataBaseHelper;
 
 public class GradeJuniorActivity extends AppCompatActivity  implements View.OnClickListener{
 
@@ -36,20 +31,18 @@ public class GradeJuniorActivity extends AppCompatActivity  implements View.OnCl
     private int point;
     private String questions[][] = new String[NumberOfQuestions][5];
     private int count = 0;
+    int counts=0;
     private int score = 0;
     private int percent = 0;
     private String answerStr;
     int[] order = null;
     private static Toast t;
-    private int NumberOfQuestions2 = 10;
-    private String QuestionList[];
-    private String AnswerList[];
-
+    private SQLiteDatabase sql;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_grade_first);
+        setContentView(R.layout.activity_grade_junior);
         // ビューの初期化
         questionText  = (TextView) findViewById(R.id.question);
         questionsText = (TextView)findViewById(R.id.score);
@@ -62,23 +55,23 @@ public class GradeJuniorActivity extends AppCompatActivity  implements View.OnCl
         answerButton3.setOnClickListener(this);
         answerButton4.setOnClickListener(this);
 
-// 問題をセット
+        // 問題をセット
         try {
             AssetManager as = getResources().getAssets();
-            InputStream is = as.open("test.csv");
+            InputStream is = as.open("testjunior.csv");
             CSVReader reader = new CSVReader(new InputStreamReader(is), ',');
             for (int i = 0; i < NumberOfQuestions; i++) {
                 questions[i] = reader.readNext();
             }
+
+
         } catch (IOException e) {
             e.printStackTrace();
         }
-        // 問題をシャッフル
-        order = createRandomArray(NumberOfQuestions, 0);
-// 問題をボタンのラベルとして表示
+        // 問題をボタンのラベルとして表示
         setNextText();
-
     }
+
     private int[] createRandomArray(int n, int offset) {
         int data[] = new int[n];
         Random random1 = new Random();
@@ -96,6 +89,7 @@ public class GradeJuniorActivity extends AppCompatActivity  implements View.OnCl
         }
         return data;
     }
+
     private void setNextText() {
         if (count >= NumberOfQuestions) {
             Intent intent = new Intent(this, ResultActivity.class);
@@ -106,16 +100,14 @@ public class GradeJuniorActivity extends AppCompatActivity  implements View.OnCl
         }
         answerStr = questions[count][1];
         int rndNum[] = createRandomArray(4, 1);
-        questionText.setText(questions[order[count]][0]);
-        answerButton1.setText(questions[order[count]][rndNum[0]]);
-        answerButton2.setText(questions[order[count]][rndNum[1]]);
-        answerButton3.setText(questions[order[count]][rndNum[2]]);
-        answerButton4.setText(questions[order[count]][rndNum[3]]);
+        questionText.setText(questions[count][0]);
+        answerButton1.setText(questions[count][rndNum[0]]);
+        answerButton2.setText(questions[count][rndNum[1]]);
+        answerButton3.setText(questions[count][rndNum[2]]);
+        answerButton4.setText(questions[count][rndNum[3]]);
         count++;
         score = score +1;
         questionsText.setText(score + "/" + "10");
-
-
     }
 
     @Override
@@ -128,7 +120,16 @@ public class GradeJuniorActivity extends AppCompatActivity  implements View.OnCl
             }
             t = Toast.makeText(this,"正解です",Toast.LENGTH_SHORT);
             t.show();
+            setNextText();
         } else {
+
+            DataBaseHelper db = new DataBaseHelper(getApplicationContext(),"CarQuiz.db",null,1);
+            sql = db.getWritableDatabase();
+            String answer = answerStr;
+            String question = questionText.getText().toString();
+            String insert = "INSERT INTO MissQuestion(question,answer,grade) VALUES (" + "'" + question + "'" + "," + "'" + answer+ "'" + ",'ジュニア級')";
+            sql.execSQL(insert);
+
             if(t != null){
                 t.cancel();
             }
@@ -138,8 +139,6 @@ public class GradeJuniorActivity extends AppCompatActivity  implements View.OnCl
             Log.d("Quiz","percent:" + percent);
 
             setNextText();
-
         }
     }
-
 }

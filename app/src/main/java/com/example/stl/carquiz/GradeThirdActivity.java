@@ -1,5 +1,6 @@
 package com.example.stl.carquiz;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.AssetManager;
 import android.database.sqlite.SQLiteDatabase;
@@ -11,15 +12,26 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 import opencsv.CSVReader;
+import opencsv.CSVWriter;
 import DataAccess.DataBaseHelper;
 
-public class GradeFirstActivity extends AppCompatActivity  implements View.OnClickListener{
+public class GradeThirdActivity extends AppCompatActivity  implements View.OnClickListener{
 
     private int NumberOfQuestions = 10;
     private TextView questionText;
@@ -42,7 +54,7 @@ public class GradeFirstActivity extends AppCompatActivity  implements View.OnCli
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_grade_first);
+        setContentView(R.layout.activity_grade_third);
         // ビューの初期化
         questionText  = (TextView) findViewById(R.id.question);
         questionsText = (TextView)findViewById(R.id.score);
@@ -71,7 +83,6 @@ public class GradeFirstActivity extends AppCompatActivity  implements View.OnCli
         // 問題をボタンのラベルとして表示
         setNextText();
     }
-
     private int[] createRandomArray(int n, int offset) {
         int data[] = new int[n];
         Random random1 = new Random();
@@ -89,7 +100,6 @@ public class GradeFirstActivity extends AppCompatActivity  implements View.OnCli
         }
         return data;
     }
-
     private void setNextText() {
         if (count >= NumberOfQuestions) {
             Intent intent = new Intent(this, ResultActivity.class);
@@ -108,8 +118,6 @@ public class GradeFirstActivity extends AppCompatActivity  implements View.OnCli
         count++;
         score = score +1;
         questionsText.setText(score + "/" + "10");
-
-
     }
 
     @Override
@@ -125,12 +133,11 @@ public class GradeFirstActivity extends AppCompatActivity  implements View.OnCli
             setNextText();
         } else {
 
-            // SQLiteOpenHelperをインスタンス化する
             DataBaseHelper db = new DataBaseHelper(getApplicationContext(),"CarQuiz.db",null,1);
             sql = db.getWritableDatabase();
             String answer = answerStr;
             String question = questionText.getText().toString();
-            String insert = "INSERT INTO MissQuestion(question,answer,grade) VALUES (" + "'" + question + "'" + "," + "'" + answer+ "'" + ",'1級')";
+            String insert = "INSERT INTO MissQuestion(question,answer,grade) VALUES (" + "'" + question + "'" + "," + "'" + answer+ "'" + ",'3級')";
             sql.execSQL(insert);
 
             if(t != null){
@@ -145,5 +152,3 @@ public class GradeFirstActivity extends AppCompatActivity  implements View.OnCli
         }
     }
 }
-
-

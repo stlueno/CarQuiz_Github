@@ -18,12 +18,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void ReviewButton(View v){
-        Intent intent = new Intent(this,MissJuniorActivity.class);
+        Intent intent = new Intent(this,MissChoiceActivity.class);
         startActivity(intent);
     }
 
     public void HelpButton(View v){
-        Intent intent = new Intent(this,MainActivity.class);
+        Intent intent = new Intent(this,HelpActivity.class);
         startActivity(intent);
     }
 }

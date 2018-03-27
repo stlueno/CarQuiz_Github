@@ -6,13 +6,56 @@
     android:layout_height="match_parent"
     tools:context="com.example.stl.carquiz.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="103dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="く   る   研"
+            android:layout_marginTop="90dp"
+            android:layout_marginBottom="80dp"
+            android:textSize="38sp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="300sp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:background="#D0FA58"
+            android:onClick="PlayButton"
+            android:layout_marginBottom="40dp"
+            android:text="プ   レ   イ"
+            android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="300sp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:background="#D0FA58"
+            android:onClick="ReviewButton"
+            android:layout_marginBottom="40dp"
+            android:text="復    習"
+            android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="300sp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:background="#D0FA58"
+            android:onClick="HelpButton"
+            android:layout_marginBottom="40dp"
+            android:text="くる研とは？"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
