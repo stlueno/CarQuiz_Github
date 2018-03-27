@@ -18,8 +18,10 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:text="結果発表"
-            android:textSize="30sp" />
+            android:layout_marginTop="40sp"
+            android:text="結 果 発 表"
+            android:textSize="40sp" />
+
 
         <TextView
             android:id="@+id/textView4"
@@ -27,10 +29,8 @@
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/percent"
             android:layout_alignBottom="@+id/percent"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginEnd="27dp"
-            android:layout_marginRight="27dp"
+            android:layout_toEndOf="@+id/percent"
+            android:layout_toRightOf="@+id/percent"
             android:text="％"
             android:textSize="30sp" />
 
@@ -40,22 +40,24 @@
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/percent"
             android:layout_alignBottom="@+id/percent"
-            android:layout_toLeftOf="@+id/percent"
-            android:layout_toStartOf="@+id/percent"
+            android:layout_alignLeft="@+id/point"
+            android:layout_alignStart="@+id/point"
             android:text="正答率"
-            android:textSize="25sp" />
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/percent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/point"
-            android:layout_marginTop="14dp"
-            android:layout_toLeftOf="@+id/textView4"
-            android:layout_toStartOf="@+id/textView4"
+            android:layout_marginLeft="17dp"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="12dp"
+            android:layout_toEndOf="@+id/textView5"
+            android:layout_toRightOf="@+id/textView5"
             android:text="0"
             android:textColor="#FF0000"
-            android:textSize="30sp" />
+            android:textSize="40sp" />
 
         <TextView
             android:id="@+id/point"
@@ -63,13 +65,14 @@
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/textView2"
             android:layout_alignBottom="@+id/textView2"
-            android:layout_alignEnd="@+id/button"
-            android:layout_alignRight="@+id/button"
-            android:layout_marginEnd="25dp"
-            android:layout_marginRight="25dp"
+            android:layout_alignLeft="@+id/button"
+            android:layout_alignStart="@+id/button"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="60dp"
+            android:layout_marginStart="60dp"
             android:text="00"
             android:textColor="#FF0000"
-            android:textSize="30sp" />
+            android:textSize="50sp" />
 
 
         <TextView
@@ -77,25 +80,27 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView1"
-            android:layout_marginLeft="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="19dp"
-            android:layout_toEndOf="@+id/textView1"
-            android:layout_toRightOf="@+id/textView1"
+            android:layout_marginLeft="23dp"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="62dp"
+            android:layout_toEndOf="@+id/point"
+            android:layout_toRightOf="@+id/point"
             android:text="問/10問"
-            android:textSize="25sp" />
+            android:textSize="35sp" />
 
         <Button
             android:id="@+id/button"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:layout_gravity="center_horizontal"
+            android:layout_alignLeft="@+id/button2"
+            android:layout_alignStart="@+id/button2"
+            android:layout_below="@+id/percent"
+            android:layout_gravity="center"
+            android:layout_marginTop="84dp"
             android:background="#D0FA58"
             android:onClick="onClickChoice"
             android:text="メニューに戻る"
-            android:textSize="20sp"/>
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/button2"
@@ -108,7 +113,7 @@
             android:background="#D0FA58"
             android:onClick="onClickTop"
             android:text="トップへ戻る"
-            android:textSize="20sp"/>
+            android:textSize="20sp" />
     </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

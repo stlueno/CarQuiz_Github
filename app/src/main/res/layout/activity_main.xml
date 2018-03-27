@@ -21,7 +21,7 @@
             android:text="く   る   研"
             android:layout_marginTop="90dp"
             android:layout_marginBottom="80dp"
-            android:textSize="38sp" />
+            android:textSize="44sp" />
 
         <Button
             android:id="@+id/button"
@@ -32,7 +32,7 @@
             android:onClick="PlayButton"
             android:layout_marginBottom="40dp"
             android:text="プ   レ   イ"
-            android:textSize="18sp"/>
+            android:textSize="22sp"/>
 
         <Button
             android:id="@+id/button2"
@@ -43,7 +43,7 @@
             android:onClick="ReviewButton"
             android:layout_marginBottom="40dp"
             android:text="復    習"
-            android:textSize="18sp"/>
+            android:textSize="22sp"/>
 
         <Button
             android:id="@+id/button3"
@@ -54,7 +54,7 @@
             android:onClick="HelpButton"
             android:layout_marginBottom="40dp"
             android:text="くる研とは？"
-            android:textSize="18sp"/>
+            android:textSize="22sp"/>
 
     </LinearLayout>
 

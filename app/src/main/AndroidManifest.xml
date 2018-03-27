@@ -27,7 +27,8 @@
         <activity android:name=".MissChoiceActivity" />
         <activity android:name=".MissThirdActivity" />
         <activity android:name=".MissSecondActivity" />
-        <activity android:name=".MissFirstActivity"></activity>
+        <activity android:name=".MissFirstActivity" />
+        <activity android:name=".GradeHelpActivity"></activity>
     </application>
 
 </manifest>

@@ -16,28 +16,41 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30sp"
+                android:text="ジュニア級"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:textColor="#585858"/>
+            <View
+                android:id="@+id/hairline2"
+                android:layout_height="5dp"
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:background="#74DF00"/>
+
+            <TextView
                 android:id="@+id/MissQuiz"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="TextView"
                 android:textSize="20sp"
-                android:textColor="#000000"/>
-
-            <TextView
-                android:id="@+id/setumei"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="覚えたら消しましょう。"
-                android:textSize="18sp"
-                android:gravity="center"
-                android:textColor="#FF0000"/>
+                android:textColor="#585858"
+                android:layout_marginTop="10sp"/>
 
             <Button
                 android:id="@+id/Next"
-                android:layout_width="match_parent"
+                android:layout_width="300sp"
+                android:layout_gravity="center"
                 android:layout_height="wrap_content"
-                android:text="削除"
-                android:onClick="onClick"/>
+                android:layout_marginBottom="30sp"
+                android:layout_marginTop="20sp"
+                android:text="削 除 す る"
+                android:onClick="onClick"
+                android:background="#D0FA58" />
+
         </LinearLayout>
     </ScrollView>
 

@@ -11,6 +11,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
@@ -19,7 +20,7 @@
             android:gravity="center"
             android:textSize="30sp"
             android:layout_marginTop="60dp"
-            android:layout_marginBottom="90dp"/>
+            android:layout_marginBottom="75dp"/>
 
         <Button
             android:id="@+id/button6"
@@ -30,7 +31,7 @@
             android:layout_marginBottom="35dp"
             android:background="#D0FA58"
             android:onClick="onClickJunior"
-            android:textSize="18sp"/>
+            android:textSize="22sp"/>
 
         <Button
             android:id="@+id/button7"
@@ -41,7 +42,7 @@
             android:layout_marginBottom="35dp"
             android:background="#D0FA58"
             android:onClick="onClickGrade3"
-            android:textSize="18sp"/>
+            android:textSize="22sp"/>
 
         <Button
             android:id="@+id/button8"
@@ -52,7 +53,7 @@
             android:layout_marginBottom="35dp"
             android:background="#D0FA58"
             android:onClick="onClickGrade2"
-            android:textSize="18sp"/>
+            android:textSize="22sp"/>
 
         <Button
             android:id="@+id/button9"
@@ -63,7 +64,19 @@
             android:layout_marginBottom="35dp"
             android:background="#D0FA58"
             android:onClick="onClickGrade1"
-            android:textSize="18sp"/>
+            android:textSize="22sp"/>
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="80sp"
+            android:layout_height="80sp"
+            android:layout_gravity="center"
+            android:text="?"
+            android:textSize="35sp"
+            android:layout_marginBottom="30sp"
+            android:background="@drawable/frame_style"
+            android:onClick="onClick2"/>
+
 
     </LinearLayout>
 

@@ -1,12 +1,16 @@
 package com.example.stl.carquiz;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import DataAccess.DataBaseHelper;
 
@@ -49,10 +53,34 @@ public class MissFirstActivity extends AppCompatActivity {
     }
 
     public void onClick(View v){
-        DataBaseHelper db = new DataBaseHelper(getApplicationContext(),"CarQuiz.db",null,1);
-        sql = db.getWritableDatabase();
-        String delete = "delete from MissQuestion";
-        sql.execSQL(delete);
+        // 確認ダイアログの生成
+        AlertDialog.Builder alertDlg = new AlertDialog.Builder(this);
+        alertDlg.setTitle("削除確認");
+        alertDlg.setMessage("削除します。よろしいですか？");
+        alertDlg.setPositiveButton(
+                "OK",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // OK ボタンクリック処理
+                        DataBaseHelper db = new DataBaseHelper(getApplicationContext(),"CarQuiz.db",null,1);
+                        sql = db.getWritableDatabase();
+                        String delete = "delete from MissQuestion";
+                        sql.execSQL(delete);
+                    }
+                });
+        alertDlg.setNegativeButton(
+                "Cancel",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                    }
+                });
+        // 表示
+        alertDlg.create().show();
+        Toast.makeText(this,"削除後はすぐに反映されないため一旦戻り再度ご覧ください",Toast.LENGTH_LONG).show();
+    }
+    public void onClick2(View v){
+        Intent intent = new Intent(this,MissChoiceActivity.class);
+        startActivity(intent);
 
     }
 }

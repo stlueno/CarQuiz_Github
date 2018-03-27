@@ -35,19 +35,20 @@
 
         <Button
             android:id="@+id/one"
-            android:layout_width="350sp"
+            android:layout_width="345sp"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:layout_gravity="center_horizontal"
             android:layout_height="wrap_content"
             android:layout_below="@+id/question"
             android:layout_marginBottom="30dp"
+            android:layout_marginTop="35dp"
             android:background="#D0FA58"
             android:textSize="18sp" />
 
         <Button
             android:id="@+id/two"
-            android:layout_width="350sp"
+            android:layout_width="345sp"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:layout_gravity="center_horizontal"
@@ -59,7 +60,7 @@
 
         <Button
             android:id="@+id/three"
-            android:layout_width="350sp"
+            android:layout_width="345sp"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:layout_gravity="center_horizontal"
@@ -71,7 +72,7 @@
 
         <Button
             android:id="@+id/four"
-            android:layout_width="350sp"
+            android:layout_width="345sp"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:layout_gravity="center_horizontal"

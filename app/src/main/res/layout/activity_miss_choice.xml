@@ -23,43 +23,47 @@
 
         <Button
             android:id="@+id/button6"
-            android:layout_width="match_parent"
+            android:layout_width="300sp"
+            android:layout_gravity="center"
             android:layout_height="wrap_content"
             android:text="ジュニア級"
-            android:layout_marginBottom="25dp"
+            android:layout_marginBottom="35dp"
             android:background="#D0FA58"
             android:onClick="onClickMissJunior"
-            android:textSize="18sp"/>
+            android:textSize="22sp"/>
 
         <Button
             android:id="@+id/button7"
-            android:layout_width="match_parent"
+            android:layout_width="300sp"
+            android:layout_gravity="center"
             android:layout_height="wrap_content"
-            android:text="3級"
-            android:layout_marginBottom="25dp"
+            android:text="3    級"
+            android:layout_marginBottom="35dp"
             android:background="#D0FA58"
             android:onClick="onClickMissGrade3"
-            android:textSize="18sp"/>
+            android:textSize="22sp"/>
 
         <Button
             android:id="@+id/button8"
-            android:layout_width="match_parent"
+            android:layout_width="300sp"
+            android:layout_gravity="center"
             android:layout_height="wrap_content"
-            android:text="2級"
-            android:layout_marginBottom="25dp"
+            android:text="2    級"
+            android:layout_marginBottom="35dp"
             android:background="#D0FA58"
             android:onClick="onClickMissGrade2"
-            android:textSize="18sp"/>
+            android:textSize="22sp"/>
 
         <Button
             android:id="@+id/button9"
-            android:layout_width="match_parent"
+            android:layout_width="300sp"
+            android:layout_gravity="center"
             android:layout_height="wrap_content"
-            android:text="1級"
-            android:layout_marginBottom="25dp"
+            android:text="1    級"
+            android:layout_marginBottom="35dp"
             android:background="#D0FA58"
             android:onClick="onClickMissGrade1"
-            android:textSize="18sp"/>
+            android:textSize="22sp"/>
 
     </LinearLayout>
 

@@ -32,4 +32,9 @@ public class ChoiceActivity extends AppCompatActivity {
         Intent intent = new Intent(this,GradeFirstActivity.class);
         startActivity(intent);
     }
+
+    public void onClick2(View v){
+        Intent intent = new Intent(this,GradeHelpActivity.class);
+        startActivity(intent);
+    }
 }

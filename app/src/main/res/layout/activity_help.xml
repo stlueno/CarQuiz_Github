@@ -25,25 +25,35 @@
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="20dp"/>
             <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="くるまマイスター検定の\nクイズアプリです。"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"/>
+            <TextView
                 android:id="@+id/textView4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="〇くるまマイスター検定とは"
                 android:gravity=""
-                android:textSize="20sp"/>
+                android:textSize="24sp"/>
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="日本の最も重要な基幹産業の代表でもある「くるま産業」。この「くるま産業」をさらに育て、もっと幅広い人たちに「くるま」への興味を抱いて頂きたい。そして「くるま」のある生活を楽しんで頂きたい。
-「くるまマイスター検定」は、そんな「くるま」のある生活、「くるま」文化の醸成に貢献することを目的としています。"
+                android:text="日本の最も重要な基幹産業の代表でもある「くるま産業」。\nこの「くるま産業」をさらに育て、\nもっと幅広い人たちに「くるま」への\n興味を抱いて頂きたい。\nそして「くるま」のある生活を楽しんで頂きたい。
+\n「くるまマイスター検定」は、そんな「くるま」のある生活、「くるま」文化の醸成に貢献することを目的としています。"
                 android:gravity=""
-                android:textSize="15sp"/>
+                android:textSize="20sp"/>
             <View
                 android:id="@+id/hairline"
-                android:layout_height="1dp"
+                android:layout_height="4dp"
                 android:layout_marginTop="16dp"
-                android:layout_width="match_parent"
+                android:layout_width="340sp"
+                android:layout_gravity="center"
                 android:background="#D0FA58"/>
             <TextView
                 android:id="@+id/textView6"
@@ -52,21 +62,22 @@
                 android:text="〇受験するメリットとは"
                 android:layout_marginTop="18sp"
                 android:gravity=""
-                android:textSize="20sp"/>
+                android:textSize="24sp"/>
             <TextView
                 android:id="@+id/textView7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="くるまマイスター検定を受検すると、普段何気なく触れ合っている「くるま」が持つ様々な魅力を発見できます。
-        そして、くるまに関する幅広く豊かな知識が身につきます。くるまが発展してきた歴史は、人類発展の歴史でもあります。
-        なぜそのくるまが生まれたか、なぜその機能が生まれたかなど、そこには必ず背景や理由が存在します。"
+                android:text="くるまマイスター検定を受検すると、普段何気なく触れ合っている「くるま」が持つ様々な魅力を発見できます。\n
+そして、くるまに関する幅広く豊かな知識が身につきます。\nくるまが発展してきた歴史は、人類発展の歴史でもあります。\n
+なぜそのくるまが生まれたか、なぜその機能が生まれたかなど、そこには必ず背景や理由が存在します。"
                 android:gravity=""
-                android:textSize="18sp"/>
+                android:textSize="20sp"/>
             <View
                 android:id="@+id/hairline2"
-                android:layout_height="1dp"
+                android:layout_height="4dp"
                 android:layout_marginTop="16dp"
-                android:layout_width="match_parent"
+                android:layout_width="340sp"
+                android:layout_gravity="center"
                 android:background="#D0FA58"/>
             <TextView
                 android:id="@+id/textView8"
@@ -75,28 +86,17 @@
                 android:text="〇好きなことをキャリアにできる"
                 android:layout_marginTop="18sp"
                 android:gravity=""
-                android:textSize="20sp"/>
+                android:textSize="24sp"/>
             <TextView
                 android:id="@+id/textView9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="現在、自動車に関する総合的な知識を得られる検定試験はくるまマイスター検定だけとなります。
+                android:text="現在、自動車に関する総合的な知識を得られる検定試験は、くるまマイスター検定だけとなります。\n
 ご自身がどれだけくるまに対しての知識をお持ちか、この検定試験で発揮してください。
-またその結果を周りの方に披露していただくため、下記のような特典もご用意しております。仲間、進学、職場、就職や転職など、あなたのくるまへの知識を是非ともキャリアにしてください。
-唯一の自動車知識検定という観点から業界でも注目され、合格者の増加に伴い幅広く活用されています。"
-                android:gravity=""
-                android:textSize="18sp"/>
-            <Button
-                android:id="@+id/Next"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="戻る"
-                android:layout_marginTop="30sp"
+\n仲間、進学、職場、就職や転職など、あなたのくるまへの知識を是非ともキャリアにしてください。
+唯一の自動車知識検定という観点から業界でも注目され、\n合格者の増加に伴い幅広く活用されています。"
                 android:layout_marginBottom="40sp"
-                android:onClick="onClick"
-                android:textSize="20sp"
-                android:background="#D0FA58"/>
+                android:textSize="20sp"/>
 
         </LinearLayout>
     </ScrollView>
