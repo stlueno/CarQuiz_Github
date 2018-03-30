@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+//問題の説明をする画面
 public class HelpActivity extends AppCompatActivity {
 
     @Override

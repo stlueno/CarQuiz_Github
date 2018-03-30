@@ -58,7 +58,7 @@ public class GradeFirstActivity extends AppCompatActivity  implements View.OnCli
         // 問題をセット
         try {
             AssetManager as = getResources().getAssets();
-            InputStream is = as.open("testjunior.csv");
+            InputStream is = as.open("First.csv");
             CSVReader reader = new CSVReader(new InputStreamReader(is), ',');
             for (int i = 0; i < NumberOfQuestions; i++) {
                 questions[i] = reader.readNext();
@@ -72,6 +72,12 @@ public class GradeFirstActivity extends AppCompatActivity  implements View.OnCli
         setNextText();
     }
 
+    /**
+     *選択肢をランダムにするため
+     * @param n
+     * @param offset
+     * @return
+     */
     private int[] createRandomArray(int n, int offset) {
         int data[] = new int[n];
         Random random1 = new Random();
@@ -90,6 +96,9 @@ public class GradeFirstActivity extends AppCompatActivity  implements View.OnCli
         return data;
     }
 
+    /**
+     * 問題をセットする
+     */
     private void setNextText() {
         if (count >= NumberOfQuestions) {
             Intent intent = new Intent(this, ResultActivity.class);
@@ -112,6 +121,10 @@ public class GradeFirstActivity extends AppCompatActivity  implements View.OnCli
 
     }
 
+    /**
+     * ボタンが押された時の処理
+     * @param v
+     */
     @Override
     public void onClick(View v) {
         if (((Button)v).getText().equals(answerStr)) {

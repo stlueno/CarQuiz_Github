@@ -35,7 +35,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="TextView"
-                android:textSize="20sp"
+                android:textSize="22sp"
                 android:textColor="#585858"/>
 
                 <Button
@@ -47,7 +47,8 @@
                 android:layout_marginTop="20sp"
                 android:text="削 除 す る"
                 android:onClick="onClick"
-                android:background="#D0FA58"/>
+                android:background="#D0FA58"
+                    android:textSize="22sp"/>
 
         </LinearLayout>
     </ScrollView>

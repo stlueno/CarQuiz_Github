@@ -19,7 +19,7 @@
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="く る 研 と は ？"
+                android:text="C A R Q とは ？"
                 android:gravity="center"
                 android:textSize="40sp"
                 android:layout_marginTop="30dp"
@@ -28,10 +28,18 @@
                 android:id="@+id/textView10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="くるまマイスター検定の\nクイズアプリです。"
+                android:text="くるまに関する\nクイズアプリです。"
                 android:gravity="center"
                 android:textSize="25sp"
                 android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"/>
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="問題はくるまマイスター検定を\n参考にしました。"
+                android:gravity="center"
+                android:textSize="24sp"
                 android:layout_marginBottom="20dp"/>
             <TextView
                 android:id="@+id/textView4"

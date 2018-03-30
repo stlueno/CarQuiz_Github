@@ -13,6 +13,7 @@ public class ResultActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
+        //正答率と正解数の表示
         Bundle bundle = getIntent().getExtras();
         Bundle bundle2 = getIntent().getExtras();
         if (bundle != null) {

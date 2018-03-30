@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="く   る   研"
+            android:text="C  A  R  Q"
             android:layout_marginTop="90dp"
             android:layout_marginBottom="80dp"
             android:textSize="44sp" />
@@ -53,7 +53,7 @@
             android:background="#D0FA58"
             android:onClick="HelpButton"
             android:layout_marginBottom="40dp"
-            android:text="くる研とは？"
+            android:text="C A R Qとは？"
             android:textSize="22sp"/>
 
     </LinearLayout>

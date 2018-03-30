@@ -1,6 +1,5 @@
 package com.example.stl.carquiz;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.res.AssetManager;
 import android.database.sqlite.SQLiteDatabase;
@@ -12,23 +11,12 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 import opencsv.CSVReader;
-import opencsv.CSVWriter;
 import DataAccess.DataBaseHelper;
 
 public class GradeThirdActivity extends AppCompatActivity  implements View.OnClickListener{
@@ -70,7 +58,7 @@ public class GradeThirdActivity extends AppCompatActivity  implements View.OnCli
         // 問題をセット
         try {
             AssetManager as = getResources().getAssets();
-            InputStream is = as.open("testjunior.csv");
+            InputStream is = as.open("Third.csv");
             CSVReader reader = new CSVReader(new InputStreamReader(is), ',');
             for (int i = 0; i < NumberOfQuestions; i++) {
                 questions[i] = reader.readNext();
@@ -83,6 +71,13 @@ public class GradeThirdActivity extends AppCompatActivity  implements View.OnCli
         // 問題をボタンのラベルとして表示
         setNextText();
     }
+
+    /**
+     * 選択肢をランダムにするため
+     * @param n
+     * @param offset
+     * @return
+     */
     private int[] createRandomArray(int n, int offset) {
         int data[] = new int[n];
         Random random1 = new Random();
@@ -100,6 +95,10 @@ public class GradeThirdActivity extends AppCompatActivity  implements View.OnCli
         }
         return data;
     }
+
+    /**
+     * 問題をセットする
+     */
     private void setNextText() {
         if (count >= NumberOfQuestions) {
             Intent intent = new Intent(this, ResultActivity.class);
@@ -120,6 +119,10 @@ public class GradeThirdActivity extends AppCompatActivity  implements View.OnCli
         questionsText.setText(score + "/" + "10");
     }
 
+    /**
+     * ボタンを押された時の処理
+     * @param v
+     */
     @Override
     public void onClick(View v) {
         if (((Button)v).getText().equals(answerStr)) {

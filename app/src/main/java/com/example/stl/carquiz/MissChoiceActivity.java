@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+//復習画面
 public class MissChoiceActivity extends AppCompatActivity {
 
     @Override

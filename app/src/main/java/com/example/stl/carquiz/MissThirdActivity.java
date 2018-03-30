@@ -33,7 +33,6 @@ public class MissThirdActivity extends AppCompatActivity {
         startManagingCursor(cursor);
 
         String result_question = "";
-        String result_answer = "";
 
         while( cursor.moveToNext() ){
             count++;
@@ -42,16 +41,17 @@ public class MissThirdActivity extends AppCompatActivity {
             String question          =   cursor.getString(index_question);
             String answer     =   cursor.getString(index_answer);
             result_question      += "問題 " + count + "\n"+ question + "\n"+ "\n" + "答え："+ answer + "\n" + "\n";
-            result_answer      += " 答え:" +  answer + "\n";
 
         }
 
         TextView tv = (TextView)findViewById(R.id.MissQuiz);
         tv.setText( result_question );
-        //Button bt = (Button)findViewById(R.id.Answer);
-        //bt.setText(result_answer);
     }
 
+    /**
+     * ボタンが押された処理
+     * @param v
+     */
     public void onClick(View v){
         // 確認ダイアログの生成
         AlertDialog.Builder alertDlg = new AlertDialog.Builder(this);
